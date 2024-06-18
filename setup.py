@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 DESCRIPTION = 'The interface that gathers all the projects together'
 
 
@@ -23,6 +23,7 @@ setuptools.setup(
     include_package_data=True, 
     install_requires=[
         "django_nameko_components @ git+https://github.com/ashkan-khd/django-nameko-components@v0.0.3",
+        "django-model-utils==4.5.1",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
