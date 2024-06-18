@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3.9-management
+    container_name: realtyna_mq
+    ports:
+      - "15673:15672"
+      - "5672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=realtyna_user
+      - RABBITMQ_DEFAULT_PASS=realtyna_pass
+    restart: always
+    networks:
+      - realtyna_network
+
+  redis:
+    image: "redis:6.2-alpine"
+    container_name: realtyna_redis
+    ports:
+      - "6379"
+    restart: always
+    networks:
+      - realtyna_network
+
+
+networks:
+  realtyna_network:
+    name: realtyna_network
