@@ -22,7 +22,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True, 
     install_requires=[
-        "git+https://github.com/ashkan-khd/django-nameko-components@v0.0.3",
+        "django_nameko_components @ git+https://github.com/ashkan-khd/django-nameko-components@v0.0.3",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
