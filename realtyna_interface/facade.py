@@ -1,7 +1,9 @@
+from typing import Dict, List
 from abc import ABC, abstractmethod
+
 from dataclasses import dataclass
 from datetime import datetime
-from typing import List
+
 from django_components.facade import ComponentFacade
 
 from realtyna_interface.data import BaseData, JSONSerializableUUID
@@ -31,5 +33,5 @@ class ReservingFacade(ComponentFacade, ABC):
         rooms: List[JSONSerializableUUID],
         start_datetime: datetime,
         end_datetime: datetime,
-    ) -> Reservation:
+    ) -> Dict[JSONSerializableUUID, List[Reservation]]:
         pass
