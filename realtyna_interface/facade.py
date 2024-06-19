@@ -11,7 +11,7 @@ class ListingFacade(ComponentFacade, ABC):
     name: str = "listing"
 
     @abstractmethod
-    def validate_listing(self, listing: JSONSerializableUUID) -> bool:
+    def validate_room(self, room: JSONSerializableUUID) -> bool:
         pass
 
 
